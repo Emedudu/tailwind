@@ -15,7 +15,10 @@ function Navbar(props) {
       </div>
       <div className="flex items-center ">
         <BsGithub size={32} className="m-2" />
-        <input className="form-control bg-transparent outline outline-1 outline-gray-500 rounded-md h-6 py-1 px-2 m-2 text-black focus:bg-white hidden md:block" />
+        <input
+          placeholder="Search or jump to..."
+          className="form-control bg-transparent outline outline-1 outline-gray-500 rounded-md h-6 py-1 px-2 m-2 text-black font-normal focus:bg-white focus:w-[max(calc(100vw-730px),175px)] hidden md:block"
+        />
         <Link href={"#"}>
           <a className="m-2 hidden md:block">Pulls</a>
         </Link>
