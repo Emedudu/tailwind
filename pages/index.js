@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
+import SubNavbar from "../components/SubNavbar";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
 
       <main className="font-sans">
         <Navbar />
+        <SubNavbar />
       </main>
     </div>
   );

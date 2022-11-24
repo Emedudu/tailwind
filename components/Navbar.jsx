@@ -6,6 +6,7 @@ import { MdOutlineNotifications } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { BsSlashSquare } from "react-icons/bs";
 
 function Navbar(props) {
   return (
@@ -15,12 +16,15 @@ function Navbar(props) {
       </div>
       <div className="flex items-center ">
         <BsGithub size={32} className="m-2" />
-        <input
-          placeholder="Search or jump to..."
-          className="form-control bg-transparent outline outline-1 outline-gray-500 rounded-md h-6 py-1 px-2 m-2 text-black font-normal focus:bg-white focus:w-[max(calc(100vw-730px),175px)] hidden md:block"
-        />
+        <div className="flex items-center text-gray-500 outline outline-1 outline-gray-500 h-6 rounded-md px-1 m-2">
+          <input
+            placeholder="Search or jump to..."
+            className="form-control bg-transparent h-full py-1 px-2 text-black font-normal focus:bg-white focus:w-[max(calc(100vw-730px),175px)] lg:focus:w-[min(calc(100vw-730px),500px)] hidden md:block"
+          />
+          <BsSlashSquare />
+        </div>
         <Link href={"#"}>
-          <a className="m-2 hidden md:block">Pulls</a>
+          <a className="m-2 hidden md:block lg:hidden">Pulls</a>
         </Link>
         <Link href={"#"}>
           <a className="m-2 hidden lg:block ">Pull Requests</a>
