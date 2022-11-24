@@ -1,8 +1,12 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Navbar from "../components/Navbar";
 import SubNavbar from "../components/SubNavbar";
 
-export default function Home() {
+export default function Tab() {
+  const router = useRouter();
+  const { tab } = router.query;
+  console.log(tab);
   return (
     <div>
       <Head>
@@ -13,7 +17,7 @@ export default function Home() {
 
       <main className="font-sans">
         <Navbar />
-        <SubNavbar tab={"overview"} />
+        <SubNavbar tab={tab} />
       </main>
     </div>
   );
