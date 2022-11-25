@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
+import Overview from "../components/Overview";
+import Profile from "../components/Profile";
 import SubNavbar from "../components/SubNavbar";
 
 export default function Home() {
@@ -14,6 +16,14 @@ export default function Home() {
       <main className="font-sans">
         <Navbar />
         <SubNavbar tab={"overview"} />
+        <div className="flex px-16 py-6">
+          <div className="mr-3">
+            <Profile />
+          </div>
+          <div className="ml-3 w-full">
+            <Overview />
+          </div>
+        </div>
       </main>
     </div>
   );

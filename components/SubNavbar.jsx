@@ -8,8 +8,8 @@ import Link from "next/link";
 
 function SubNavbar(props) {
   return (
-    <div className="border-b mt-12 flex text-sm">
-      <div className="w-1/3 lg:w-1/4">yo</div>
+    <div className="border-b mt-6 flex text-sm sticky top-0 bg-white">
+      <div className="w-[400px] ">yo</div>
       <ul
         className="
   nav nav-tabs nav-justified
@@ -23,8 +23,9 @@ function SubNavbar(props) {
         role="tablist"
       >
         <li
-          className={`nav-item flex-grow text-center px-1 pb-2 ${
-            props.tab == "overview" && "border-b-2 border-red-300"
+          className={`nav-item flex-grow text-center px-1 py-2 ${
+            props.tab == "overview" &&
+            "border-b-2 border-red-300 font-medium text-black"
           }`}
           role="presentation"
         >
@@ -36,8 +37,9 @@ function SubNavbar(props) {
           </Link>
         </li>
         <li
-          className={`nav-item flex-grow text-center px-1 pb-2 ${
-            props.tab == "repos" && "border-b-2 border-red-300"
+          className={`nav-item flex-grow text-center px-1 py-2 ${
+            props.tab == "repos" &&
+            "border-b-2 border-red-300 font-medium text-black"
           }`}
           role="presentation"
         >
@@ -49,8 +51,9 @@ function SubNavbar(props) {
           </Link>
         </li>
         <li
-          className={`nav-item flex-grow text-center px-1 pb-2 ${
-            props.tab == "projects" && "border-b-2 border-red-300"
+          className={`nav-item flex-grow text-center px-1 py-2 ${
+            props.tab == "projects" &&
+            "border-b-2 border-red-300 font-medium text-black"
           }`}
           role="presentation"
         >
@@ -62,8 +65,9 @@ function SubNavbar(props) {
           </Link>
         </li>
         <li
-          className={`nav-item flex-grow text-center px-1 pb-2 ${
-            props.tab == "packages" && "border-b-2 border-red-300"
+          className={`nav-item flex-grow text-center px-1 py-2 ${
+            props.tab == "packages" &&
+            "border-b-2 border-red-300 font-medium text-black"
           }`}
           role="presentation"
         >
@@ -75,8 +79,9 @@ function SubNavbar(props) {
           </Link>
         </li>
         <li
-          className={`nav-item flex-grow text-center px-1 pb-2 ${
-            props.tab == "stars" && "border-b-2 border-red-300"
+          className={`nav-item flex-grow text-center px-1 py-2 ${
+            props.tab == "stars" &&
+            "border-b-2 border-red-300 font-medium text-black"
           }`}
           role="presentation"
         >
