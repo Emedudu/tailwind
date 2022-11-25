@@ -28,8 +28,8 @@ function SubNavbar(props) {
           }`}
           role="presentation"
         >
-          <Link href={"/index"}>
-            <button className="hover:bg-slate-100 rounded-lg flex items-center">
+          <Link href={"/"}>
+            <button className="hover:bg-slate-100 rounded-lg flex items-center px-1">
               <FiBookOpen className="m-1" />
               <h6 className="m-1">Overview</h6>
             </button>
@@ -42,7 +42,7 @@ function SubNavbar(props) {
           role="presentation"
         >
           <Link href={"/repos"}>
-            <button className="hover:bg-slate-100 flex items-center rounded-lg">
+            <button className="hover:bg-slate-100 flex items-center rounded-lg px-1">
               <VscRepo className="m-1" />
               <h6 className="m-1">Repositories</h6>
             </button>
@@ -55,7 +55,7 @@ function SubNavbar(props) {
           role="presentation"
         >
           <Link href={"/projects"}>
-            <button className="hover:bg-slate-100 flex items-center rounded-lg">
+            <button className="hover:bg-slate-100 flex items-center rounded-lg px-1">
               <TbTable className="m-1" />
               <h6 className="m-1">Projects</h6>
             </button>
@@ -68,7 +68,7 @@ function SubNavbar(props) {
           role="presentation"
         >
           <Link href={"/packages"}>
-            <button className="hover:bg-slate-100 flex items-center rounded-lg">
+            <button className="hover:bg-slate-100 flex items-center rounded-lg px-1">
               <BsBox className="m-1" />
               <h6 className="m-1">Packages</h6>
             </button>
@@ -81,7 +81,7 @@ function SubNavbar(props) {
           role="presentation"
         >
           <Link href={"/stars"}>
-            <button className="hover:bg-slate-100 flex items-center rounded-lg">
+            <button className="hover:bg-slate-100 flex items-center rounded-lg px-1">
               <AiOutlineStar className="m-1" />
               <h6 className="m-1">Stars</h6>
             </button>

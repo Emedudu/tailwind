@@ -1,12 +1,34 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
+import Profile from "../components/Profile";
 import SubNavbar from "../components/SubNavbar";
 
 export default function Tab() {
   const router = useRouter();
   const { tab } = router.query;
-  console.log(tab);
+  const [TabContent, setTabContent] = useState(null);
+
+  useEffect(() => {
+    switch (tab) {
+      case "projects":
+        setTabContent(lazy(() => import("../components/Projects")));
+        break;
+      case "repos":
+        setTabContent(lazy(() => import("../components/Repositories")));
+        break;
+      case "packages":
+        setTabContent(lazy(() => import("../components/Packages")));
+        break;
+      case "stars":
+        setTabContent(lazy(() => import("../components/Stars")));
+        break;
+      default:
+        break;
+    }
+  }, [tab]);
+  console.log(TabContent);
   return (
     <div>
       <Head>
@@ -18,6 +40,12 @@ export default function Tab() {
       <main className="font-sans">
         <Navbar />
         <SubNavbar tab={tab} />
+        <Profile />
+        <Suspense fallback={"loading..."}>
+          <div>
+            <TabContent />
+          </div>
+        </Suspense>
       </main>
     </div>
   );
