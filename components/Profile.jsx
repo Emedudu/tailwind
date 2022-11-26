@@ -24,7 +24,7 @@ function Profile(props) {
       <div className="my-4 flex">
         <p className="flex items-center text-sm">
           <HiOutlineUsers className="cursor-pointer" />
-          <p className="font-semibold m-1">11</p> followers
+          <p className="font-semibold m-1">11 </p> followers
           <BsDot /> <p className="font-semibold m-1">12</p> following
         </p>
       </div>
