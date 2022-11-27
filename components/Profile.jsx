@@ -18,7 +18,7 @@ function Profile(props) {
       </p>
       <p className="text-xl font-thin text-gray-900 capitalize">emedudu</p>
       <p className="my-4">Web3 Developer</p>
-      <button className="border w-full p-1.5 font-semibold text-gray-800 text-sm rounded-lg bg-slate-50">
+      <button className="border w-full p-1.5 font-semibold text-gray-800 text-sm rounded-lg bg-slate-50 hover:bg-slate-100">
         Edit profile
       </button>
       <div className="my-4 flex">
