@@ -44,18 +44,54 @@ function Navbar(props) {
       </div>
       <div className="flex items-center">
         <MdOutlineNotifications size={24} className="m-2" />
-        <input id="drop" type="checkbox" className="group" />
-        <label for="drop" className=" m-2 hidden md:flex relative">
+        <div
+          className="cursor-pointer m-2 hidden md:flex relative group"
+          tabIndex="0"
+        >
           <AiOutlinePlus />
           <IoMdArrowDropdown />
           <div
-            id="drop"
-            className={`absolute top-12 z-10 text-black hidden group-checked:block`}
+            className={`absolute top-12 right-0 z-10 text-black font-normal border shadow rounded py-1 flex flex-col bg-white hidden group-focus:block`}
           >
-            dropdown
+            <a
+              href="#"
+              className="block whitespace-nowrap px-3 py-1 hover:bg-blue-500"
+            >
+              New Repository
+            </a>
+            <a
+              href="#"
+              className="block whitespace-nowrap px-3 py-1 hover:bg-blue-500"
+            >
+              Import Repository
+            </a>
+            <a
+              href="#"
+              className="block whitespace-nowrap px-3 py-1 hover:bg-blue-500"
+            >
+              New codespace
+            </a>
+            <a
+              href="#"
+              className="block whitespace-nowrap px-3 py-1 hover:bg-blue-500"
+            >
+              New Gist
+            </a>
+            <a
+              href="#"
+              className="block whitespace-nowrap px-3 py-1 hover:bg-blue-500"
+            >
+              New Organization
+            </a>
+            <a
+              href="#"
+              className="block whitespace-nowrap px-3 py-1 hover:bg-blue-500"
+            >
+              New Project
+            </a>
           </div>
-        </label>
-        <div className="m-2 hidden md:flex">
+        </div>
+        <div className="cursor-pointer m-2 hidden md:flex">
           <Image
             src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
             width={20}

@@ -8,7 +8,7 @@ import Link from "next/link";
 
 function SubNavbar(props) {
   return (
-    <div className="border-b mt-6 flex text-sm sticky top-0 bg-white">
+    <div className="border-b mt-6 flex text-sm sticky top-0 bg-white z-20">
       <div className="w-[400px] ">yo</div>
       <ul
         className="
