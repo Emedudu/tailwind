@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { MdOutlineNotifications } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -44,10 +44,17 @@ function Navbar(props) {
       </div>
       <div className="flex items-center">
         <MdOutlineNotifications size={24} className="m-2" />
-        <div className=" m-2 hidden md:flex">
+        <input id="drop" type="checkbox" className="group" />
+        <label for="drop" className=" m-2 hidden md:flex relative">
           <AiOutlinePlus />
           <IoMdArrowDropdown />
-        </div>
+          <div
+            id="drop"
+            className={`absolute top-12 z-10 text-black hidden group-checked:block`}
+          >
+            dropdown
+          </div>
+        </label>
         <div className="m-2 hidden md:flex">
           <Image
             src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
