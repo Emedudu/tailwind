@@ -9,18 +9,18 @@ import Image from "next/image";
 
 function SubNavbar(props) {
   return (
-    <div className="border-b mt-6 flex text-sm sticky top-0 bg-white z-20">
-      <div className="w-[400px] ">
+    <div className="border-b mt-6 flex text-sm sticky top-0 bg-white z-20 px-16 items-center">
+      <div className="w-[400px]">
         {!props.visibility && (
-          <div className="flex">
+          <div className="flex items-center space-x-2">
             <Image
               src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-              width={"40"}
-              height={"40"}
+              width={"32"}
+              height={"32"}
               className="rounded-full"
               alt="Avatar"
             />
-            <p>Emedudu</p>
+            <p className="font-semibold text-sm text-gray-600">Emedudu</p>
           </div>
         )}
       </div>

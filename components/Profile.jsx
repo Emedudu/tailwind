@@ -12,15 +12,14 @@ function Profile({ setVisibility }) {
     <div className="-mt-12 w-[200] divide-y">
       <div>
         <div>
-          <div className="relative z-50">
+          <div className="relative z-50 md:w-64 md:h-64 lg:w-72 lg:h-72">
             <Image
               src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-              width={"400"}
-              height={"400"}
+              layout="fill"
               className="rounded-full"
               alt="Avatar"
             />
-            <div className="absolute top-[240px] left-[240px] p-2 bg-white rounded-full border group shadow ">
+            <div className="absolute md:top-52 md:left-52 lg:top-56 lg:left-56 p-2 bg-white rounded-full border group shadow ">
               <a className="flex space-x-2 cursor-pointer hover:text-blue-600 items-center">
                 <RiFocus2Line size={20} color="rgb(238, 75, 43)" />
                 <p className="hidden group-hover:block text-xs">Focusing</p>
@@ -29,7 +28,6 @@ function Profile({ setVisibility }) {
           </div>
           <VisibilitySensor
             onChange={(isVisible) => {
-              console.log(isVisible);
               setVisibility(isVisible);
             }}
           >
