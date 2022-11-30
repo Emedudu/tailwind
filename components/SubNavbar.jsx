@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FiBookOpen } from "react-icons/fi";
 import { VscRepo } from "react-icons/vsc";
 import { TbTable } from "react-icons/tb";
 import { BsBox } from "react-icons/bs";
 import { AiOutlineStar } from "react-icons/ai";
 import Link from "next/link";
+import Image from "next/image";
 
 function SubNavbar(props) {
   return (
     <div className="border-b mt-6 flex text-sm sticky top-0 bg-white z-20">
-      <div className="w-[400px] ">yo</div>
+      <div className="w-[400px] ">
+        {!props.visibility && (
+          <div className="flex">
+            <Image
+              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+              width={"40"}
+              height={"40"}
+              className="rounded-full"
+              alt="Avatar"
+            />
+            <p>Emedudu</p>
+          </div>
+        )}
+      </div>
       <ul
         className="
   nav nav-tabs nav-justified

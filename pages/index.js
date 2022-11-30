@@ -1,10 +1,12 @@
 import Head from "next/head";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Overview from "../components/Overview";
 import Profile from "../components/Profile";
 import SubNavbar from "../components/SubNavbar";
 
 export default function Home() {
+  const [visibility,setVisibility]=useState(true)
   return (
     <div>
       <Head>
@@ -15,10 +17,10 @@ export default function Home() {
 
       <main className="font-sans">
         <Navbar />
-        <SubNavbar tab={"overview"} />
+        <SubNavbar tab={"overview"} visibility={visibility} />
         <div className="flex px-16 py-6">
           <div className="mr-3">
-            <Profile />
+            <Profile setVisibility={setVisibility}/>
           </div>
           <div className="ml-3 w-full">
             <Overview />

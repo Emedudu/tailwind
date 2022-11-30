@@ -1,34 +1,45 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import VisibilitySensor from "react-visibility-sensor";
 import { HiOutlineUsers } from "react-icons/hi";
 import { BsDot, BsTwitter } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { BiLink } from "react-icons/bi";
 import { RiFocus2Line } from "react-icons/ri";
 
-function Profile(props) {
+function Profile({ setVisibility }) {
   return (
     <div className="-mt-12 w-[200] divide-y">
       <div>
-        <div className="relative z-50">
-          <Image
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-            width={"400"}
-            height={"400"}
-            className="rounded-full"
-            alt="Avatar"
-          />
-          <div className="absolute top-[240px] left-[240px] p-2 bg-white rounded-full border group shadow ">
-            <a className="flex space-x-2 cursor-pointer hover:text-blue-600 items-center">
-              <RiFocus2Line size={20} color="rgb(238, 75, 43)" />
-              <p className="hidden group-hover:block text-xs">Focusing</p>
-            </a>
+        <div>
+          <div className="relative z-50">
+            <Image
+              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+              width={"400"}
+              height={"400"}
+              className="rounded-full"
+              alt="Avatar"
+            />
+            <div className="absolute top-[240px] left-[240px] p-2 bg-white rounded-full border group shadow ">
+              <a className="flex space-x-2 cursor-pointer hover:text-blue-600 items-center">
+                <RiFocus2Line size={20} color="rgb(238, 75, 43)" />
+                <p className="hidden group-hover:block text-xs">Focusing</p>
+              </a>
+            </div>
           </div>
+          <VisibilitySensor
+            onChange={(isVisible) => {
+              console.log(isVisible);
+              setVisibility(isVisible);
+            }}
+          >
+            <p className="text-2xl font-semibold text-gray-900 capitalize">
+              emeduduna akerejola
+            </p>
+          </VisibilitySensor>
+          <p className="text-xl font-thin text-gray-900 capitalize">emedudu</p>
         </div>
-        <p className="text-2xl font-semibold text-gray-900 capitalize">
-          emeduduna akerejola
-        </p>
-        <p className="text-xl font-thin text-gray-900 capitalize">emedudu</p>
+
         <p className="my-4">Web3 Developer</p>
         <button className="border w-full p-1.5 font-semibold text-gray-800 text-sm rounded-lg bg-slate-50 hover:bg-slate-100">
           Edit profile
